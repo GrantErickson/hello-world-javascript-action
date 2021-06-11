@@ -19,6 +19,7 @@ async function run() {
             owner: 'octokit',
             repo: 'rest.js',
             pull_number: 123,
+            token: myToken,
             mediaType: {
                 format: 'diff'
             }
