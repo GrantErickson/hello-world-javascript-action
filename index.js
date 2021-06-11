@@ -27,6 +27,8 @@ async function run() {
         });
         console.log("Data:");
         console.log(data);
+
+        core.setOutput("diff", data.data);
     
         // Get the JSON webhook payload for the event that triggered the workflow
         const payload = JSON.stringify(github.context.payload, undefined, 2)
