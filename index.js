@@ -12,8 +12,8 @@ async function run() {
         const time = (new Date()).toTimeString();
         core.setOutput("time", time);
   
-        const myToken = core.getInput('myToken');
-        const octokit = github.GitHub(myToken);
+        const myToken = core.getInput('GITHUB_TOKEN');
+        const octokit = github.getOctokit(myToken);
 
         const data = await octokit.rest.pulls.get({
             owner: 'octokit',
