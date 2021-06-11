@@ -6179,14 +6179,14 @@ async function run() {
         core.setOutput("time", time);
   
         const myToken = core.getInput('token');
-        console.log(`Token: ${myToken}`);
+            console.log(`Token: ${myToken}`);
         const octokit = github.getOctokit(myToken);
-
+        console.log("Got Octokit");
+        
         const data = await octokit.rest.pulls.get({
             owner: 'octokit',
             repo: 'rest.js',
             pull_number: 123,
-            token: myToken,
             mediaType: {
                 format: 'diff'
             }
