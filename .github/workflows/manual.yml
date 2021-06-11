@@ -15,7 +15,7 @@ jobs:
         uses: GrantErickson/hello-world-javascript-action@main
         with:
           who-to-greet: 'The Six-Fingered Man'
-          token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
       # Use the output from the `hello` step
       - name: Get the output time
         run: echo "The time was ${{ steps.diff.outputs.time }}"
