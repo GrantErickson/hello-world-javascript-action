@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: Hello world action step
         id: hello
-        uses: GrantErickson/hello-world-javascript-action@v4
+        uses: GrantErickson/hello-world-javascript-action@main
         with:
           who-to-greet: 'The Six-Fingered Man'
       # Use the output from the `hello` step
