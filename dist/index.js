@@ -6179,6 +6179,7 @@ async function run() {
         core.setOutput("time", time);
   
         const myToken = core.getInput('token');
+        console.log(`Token: ${myToken}`);
         const octokit = github.getOctokit(myToken);
 
         const data = await octokit.rest.pulls.get({
