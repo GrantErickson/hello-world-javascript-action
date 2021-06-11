@@ -6,7 +6,7 @@ inputs:
     required: true
     default: 'World'
   github-token:
-    description: 'GitHub Auth Token'
+    description: 'GitHub Auth Token for API access'
     required: true
     default: ''
 outputs:
