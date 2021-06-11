@@ -18,14 +18,14 @@ async function run() {
         console.log("Got Octokit");
         
         const data = await octokit.rest.pulls.get({
-            owner: 'octokit',
-            repo: 'rest.js',
-            pull_number: 123,
+            owner: 'GrantErickson',
+            repo: 'hello-world-javascript-action',
+            pull_number: 1,
             mediaType: {
                 format: 'diff'
             }
         });
-        console.log("Data: ");
+        console.log("Data:");
         console.log(data);
     
         // Get the JSON webhook payload for the event that triggered the workflow
